@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>模式档案 | The Long Dark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="blizzard" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="sub-hero">
+      <nav class="nav">
+        <a class="logo" href="index.html">THE LONG DARK</a>
+        <div class="nav-links">
+          <a href="index.html">首页</a>
+          <a href="survival.html">生存手册</a>
+          <a class="cta" href="#modes">模式总览</a>
+        </div>
+      </nav>
+      <div class="hero-content compact">
+        <p class="eyebrow">MODE DOSSIER</p>
+        <h1>模式档案</h1>
+        <p class="subtitle">选择你面对末日的方式：叙事探索、长期求生，或高压挑战。</p>
+      </div>
+    </header>
+
+    <main class="section" id="modes">
+      <div class="guide-grid">
+        <article class="card">
+          <h2>生存模式</h2>
+          <p>开放目标、长期运营。你要在资源有限的世界里建立稳定循环，挑战极限天数。</p>
+        </article>
+        <article class="card">
+          <h2>剧情模式</h2>
+          <p>围绕角色推进主线，结合探索与任务目标，更适合首次接触游戏的玩家。</p>
+        </article>
+        <article class="card" id="challenge">
+          <h2>挑战任务</h2>
+          <p>在受限条件下完成明确目标，强调路线规划、时间管理与风险应对能力。</p>
+        </article>
+        <article class="card">
+          <h2>朝圣者 / 潜行者 / 入侵者</h2>
+          <p>难度决定野生动物攻击性、资源丰富度与环境惩罚，建议按节奏逐级进阶。</p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Choose your long night.</p>
+    </footer>
+    <script src="blizzard.js"></script>
+  </body>
+</html>

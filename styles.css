@@ -1,0 +1,229 @@
+:root {
+  --bg-top: #24344b;
+  --bg-mid: #111c2a;
+  --bg-deep: #060b13;
+  --ice: #c4e5ff;
+  --snow: #f3f8ff;
+  --ember: #ff7b2f;
+  --muted: #9fb0c0;
+  --panel: rgba(12, 24, 38, 0.72);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--snow);
+  background: linear-gradient(180deg, var(--bg-top), var(--bg-mid) 44%, var(--bg-deep));
+  min-height: 100vh;
+}
+
+#blizzard {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.15;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.18) 0.5px, transparent 0.5px);
+  background-size: 2px 2px;
+}
+
+.hero,
+.sub-hero,
+main,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+.hero,
+.sub-hero {
+  min-height: 78vh;
+  overflow: hidden;
+  background: linear-gradient(155deg, rgba(28, 47, 71, 0.74), rgba(6, 11, 19, 0.9)),
+    url('https://images.unsplash.com/photo-1457269449834-928af64c684d?auto=format&fit=crop&w=1600&q=80') center/cover;
+  border-bottom: 1px solid rgba(196, 229, 255, 0.2);
+}
+
+.hero::before,
+.sub-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 35%, rgba(6, 11, 19, 0.95));
+}
+
+.nav,
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 8vw;
+  border-bottom: 1px solid rgba(196, 229, 255, 0.2);
+}
+
+.logo {
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  color: var(--ice);
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--snow);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.cta {
+  border: 1px solid rgba(243, 248, 255, 0.45);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+}
+
+.hero-content {
+  max-width: 760px;
+  padding: 12vh 8vw;
+}
+
+.hero-content.compact {
+  padding-top: 8vh;
+  min-height: 42vh;
+}
+
+.eyebrow {
+  color: var(--ice);
+  letter-spacing: 0.28rem;
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  margin: 0.6rem 0;
+}
+
+.subtitle,
+.card p,
+.mode-grid p,
+.footer p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.ghost-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #d46a2a, var(--ember));
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(255, 123, 47, 0.3);
+}
+
+.ghost-btn {
+  color: var(--snow);
+  border: 1px solid rgba(243, 248, 255, 0.3);
+}
+
+.fog {
+  position: absolute;
+  inset: auto 0 0;
+  height: 35vh;
+  background: radial-gradient(circle at 20% 30%, rgba(196, 229, 255, 0.16), transparent 55%),
+    linear-gradient(to top, rgba(6, 11, 19, 0.92), transparent 90%);
+}
+
+.section {
+  padding: 3rem 8vw;
+}
+
+.cards,
+.guide-grid,
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.1rem;
+}
+
+.cards {
+  margin-top: -8rem;
+  z-index: 3;
+}
+
+.card,
+.tile {
+  background: var(--panel);
+  border: 1px solid rgba(196, 229, 255, 0.18);
+  border-radius: 12px;
+  padding: 1.2rem;
+  backdrop-filter: blur(6px);
+}
+
+.tile {
+  text-decoration: none;
+}
+
+.card h2,
+.tile h3,
+.banner h2 {
+  margin-top: 0;
+  color: var(--ice);
+}
+
+.banner {
+  margin: 1rem 8vw 4rem;
+  padding: 2rem;
+  border: 1px solid rgba(196, 229, 255, 0.2);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(11, 20, 33, 0.9), rgba(27, 43, 63, 0.72));
+}
+
+.footer {
+  text-align: center;
+  border-top: 1px solid rgba(196, 229, 255, 0.15);
+  padding: 1rem;
+}
+
+@media (max-width: 780px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

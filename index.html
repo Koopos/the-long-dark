@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Long Dark | 极寒求生</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="blizzard" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="hero">
+      <nav class="nav">
+        <a class="logo" href="index.html">THE LONG DARK</a>
+        <div class="nav-links">
+          <a href="survival.html">生存指南</a>
+          <a href="modes.html">模式档案</a>
+          <a class="cta" href="#survival">进入风暴</a>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <p class="eyebrow">A QUIET APOCALYPSE</p>
+        <h1>在寂静末日中<br />点燃最后一束火光</h1>
+        <p class="subtitle">
+          雪原吞没城市，寒夜掩盖文明。你只剩一把斧头、一盒火柴，与继续活下去的意志。
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="survival.html">查看生存手册</a>
+          <a class="ghost-btn" href="modes.html">浏览全部模式</a>
+        </div>
+      </div>
+      <div class="fog"></div>
+    </header>
+
+    <main>
+      <section id="survival" class="section cards">
+        <article class="card">
+          <h2>体温管理</h2>
+          <p>暴风雪会快速夺走体温。火源、衣物分层与避风地形是活下来的关键。</p>
+        </article>
+        <article class="card">
+          <h2>资源抉择</h2>
+          <p>每一颗子弹、每一口罐头都弥足珍贵。负重与续航之间必须不断权衡。</p>
+        </article>
+        <article class="card">
+          <h2>野外威胁</h2>
+          <p>狼群、黑熊和寒流同样致命。观察踪迹与风向，选择最稳妥的路线。</p>
+        </article>
+      </section>
+
+      <section class="section banner">
+        <h2>继续探索 Great Bear 岛</h2>
+        <div class="mode-grid">
+          <a class="tile" href="survival.html">
+            <h3>生存手册</h3>
+            <p>火堆管理、觅食路线、临时营地搭建技巧。</p>
+          </a>
+          <a class="tile" href="modes.html">
+            <h3>模式档案</h3>
+            <p>生存、剧情、挑战的完整玩法差异与建议难度。</p>
+          </a>
+          <a class="tile" href="modes.html#challenge">
+            <h3>极限挑战</h3>
+            <p>在最短时间内穿越暴雪线，完成目标后撤离。</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>“The Long Dark” Fansite Concept · Into the storm, one day at a time.</p>
+    </footer>
+
+    <script src="blizzard.js"></script>
+  </body>
+</html>
