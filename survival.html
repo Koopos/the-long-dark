@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>生存手册 | The Long Dark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="blizzard" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="sub-hero">
+      <nav class="nav">
+        <a class="logo" href="index.html">THE LONG DARK</a>
+        <div class="nav-links">
+          <a href="index.html">首页</a>
+          <a href="modes.html">模式档案</a>
+          <a class="cta" href="#tips">求生技巧</a>
+        </div>
+      </nav>
+      <div class="hero-content compact">
+        <p class="eyebrow">SURVIVAL FIELD GUIDE</p>
+        <h1>生存手册</h1>
+        <p class="subtitle">活过第一周，关键不在战斗，而在节奏：保暖、节能、稳步推进。</p>
+      </div>
+    </header>
+
+    <main class="section" id="tips">
+      <div class="guide-grid">
+        <article class="card">
+          <h2>Day 1 优先级</h2>
+          <p>先找室内避难点，再收集可燃物。夜晚到来前务必准备两段以上可持续火源。</p>
+        </article>
+        <article class="card">
+          <h2>营养与睡眠</h2>
+          <p>寒冷会放大卡路里消耗。保持热食与温水摄入，并在高体力前保证睡眠。</p>
+        </article>
+        <article class="card">
+          <h2>风暴穿越</h2>
+          <p>暴风雪来临时，沿地标短程移动，避免迷失。能见度低时优先停留，不盲目前进。</p>
+        </article>
+        <article class="card">
+          <h2>工具路线</h2>
+          <p>优先获取小刀、斧头与简易炊具，再考虑狩猎装备，先活下去再扩张活动范围。</p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Keep the fire alive.</p>
+    </footer>
+    <script src="blizzard.js"></script>
+  </body>
+</html>
